@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!--
+ /** 
+  * @author Justin Stern (www.foxrunsoftware.net)
+  * @copyright  Copyright (c) 2012 All Rights Reserved, http://www.foxrunsoftware.net
+  * @license    FoxRunSoftware License Agreement
+  * 
+  * @package FoxRunSoftware_NotificationBar
+  */
+-->
+<config>
+    <sections>
+        <design>
+            <groups>
+                <notificationbar translate="label">
+                    <label>Notification Bar</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <display translate="label">
+                            <label>Notification Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </display>
+                        <default_style translate="label comment">
+                            <label>Include Default Styling</label>
+                            <comment>Disabling this allows you to more easily style the notification bar to match your theme</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_style>
+                        <content translate="label comment">
+                            <label>Notification Content</label>
+                            <comment>HTML is allowed</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </content>
+                        <clearcontrol translate="label comment">
+                            <label>Allow Notification to be Closed</label>
+                            <comment>Enabling this will allow the user to close the notification bar</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </clearcontrol>
+                        <identifier translate="label comment">
+                            <label>Notification Bar Identifier</label>
+                            <comment>Optional; internally identifies the current notification bar.  Setting this to a new value will cause the notification bar to display to all users, even those who cleared a previously identified bar.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </identifier>
+                        <start_date translate="label comment">
+                            <label>Start Date</label>
+                            <comment>Optional date to start displaying the notification bar</comment>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>notificationbar/adminhtml_config_form_field_datepicker</frontend_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </start_date>
+                        <end_date translate="label comment">
+                            <label>End Date</label>
+                            <comment>Optional date to stop displaying the notification bar</comment>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>notificationbar/adminhtml_config_form_field_datepicker</frontend_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </end_date>
+                        <fixed translate="label comment">
+                            <label>Fixed Notification Bar</label>
+                            <comment>Enabling this will fix the notification bar to the top of the browser, even when scrolling.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fixed>
+                        <fixed_margin translate="label comment">
+                            <label>Fixed Body Margin</label>
+                            <comment>Used only when Fixed Notification Bar is enabled; this must be the height of the notification bar, in CSS units</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fixed_margin>
+                    </fields>
+                </notificationbar>
+            </groups>
+        </design>
+    </sections>
+</config>

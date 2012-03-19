@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+ /** 
+  * @author Justin Stern (www.foxrunsoftware.net)
+  * @copyright  Copyright (c) 2012 All Rights Reserved, http://www.foxrunsoftware.net
+  * @license    FoxRunSoftware License Agreement
+  * 
+  * @package FoxRunSoftware_NotificationBar
+  */
+-->
+<config>
+    <modules>
+        <FoxRunSoftware_NotificationBar>
+            <version>1.0.0</version>
+        </FoxRunSoftware_NotificationBar>
+    </modules>
+    
+    <global>
+        <blocks>
+            <notificationbar>
+                <class>FoxRunSoftware_NotificationBar_Block</class>
+            </notificationbar>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <notificationbar>
+                    <file>notificationbar.xml</file>
+                </notificationbar>
+            </updates>
+        </layout>
+    </frontend>
+    
+    <default>
+        <design>
+            <notificationbar>                
+                <display>0</display>
+                <clearcontrol>0</clearcontrol>
+                <default_style>1</default_style>
+                <fixed>0</fixed>
+                <fixed_margin>28px</fixed_margin>
+            </notificationbar>
+        </design>
+    </default>
+</config>
