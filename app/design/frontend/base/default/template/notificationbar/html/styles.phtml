@@ -1,0 +1,40 @@
+<?php
+/**
+ * Notification bar styling
+ *
+ * @author Justin Stern (www.foxrunsoftware.net)
+ * @copyright  Copyright (c) 2012 All Rights Reserved, http://www.foxrunsoftware.net
+ * @license    FoxRunSoftware License Agreement
+ * 
+ * THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
+ * KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+ * PARTICULAR PURPOSE.
+ * 
+ * @category design
+ * @package  base_default
+ */
+?>
+<?php
+/**
+ * @see FoxRunSoftware_NotificationBar_Block_Html_Styles
+ */
+?>
+<?php if($this->displayNotifications()) : ?>
+	<?php if($this->useDefaultStyles() || $this->isFixed()) : ?>
+	<style type="text/css">
+	<?php endif; ?>
+	<?php if($this->useDefaultStyles()) : ?>
+	    #notification-bar { text-align:center;background-color:#D75F07;color:white;line-height:normal;padding:7px 0; }
+	    #notification-bar span.notification-close { background-color: #FAD163;border: 2px solid #735005;cursor: pointer;display: block;float: right;margin-right: 10px;padding-left: 4px;padding-right: 4px;text-decoration: none; }
+	    #notification-bar .notification-close a { text-decoration: none; color: #735005; }
+	    #notification-bar .notification-close a:hover { text-decoration: none; }
+	<?php endif; ?>
+	<?php if($this->isFixed()) : ?>
+		#notification-bar { position: fixed;top: 0;width: 100%;z-index: 100;border-bottom: 1px solid black; }
+		body { margin-top: <?php echo $this->getFixedMargin() ?>; }
+	<?php endif; ?>
+	<?php if($this->useDefaultStyles() || $this->isFixed()) : ?>
+	</style>
+	<?php endif; ?>
+<?php endif; ?>

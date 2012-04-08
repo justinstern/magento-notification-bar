@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+ /** 
+  * @author Justin Stern (www.foxrunsoftware.net)
+  * @copyright  Copyright (c) 2012 All Rights Reserved, http://www.foxrunsoftware.net
+  * @license    FoxRunSoftware License Agreement
+  * 
+  * @package FoxRunSoftware_NotificationBar
+  */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <block type="notificationbar/html_styles" name="notification_bar_style" as="notification_bar_style" template="notificationbar/html/styles.phtml" />
+        </reference>
+        <reference name="after_body_start">
+            <block type="notificationbar/html_notifications" name="notificationbar_notifications" template="notificationbar/html/notifications.phtml" />
+        </reference>
+    </default>
+</layout>

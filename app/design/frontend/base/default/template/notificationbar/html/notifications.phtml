@@ -1,0 +1,31 @@
+<?php
+/**
+ * Datepicker adminhtml configuration control based on the 
+ * Mage_Adminhtml_Block_Report_Config_Form_Field_YtdStart control.
+ *
+ * @author Justin Stern (www.foxrunsoftware.net)
+ * @copyright  Copyright (c) 2012 All Rights Reserved, http://www.foxrunsoftware.net
+ * @license    FoxRunSoftware License Agreement
+ * 
+ * THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
+ * KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+ * PARTICULAR PURPOSE.
+ * 
+ * @category design
+ * @package  base_default
+ */
+?>
+<?php
+/**
+ * @see FoxRunSoftware_NotificationBar_Block_Html_Notifications
+ */
+?>
+<?php if ($this->displayNotifications()): ?>
+    <div id="notification-bar"><div id="notification"><span class="notification-content"><?php echo $this->getNotificationContent(); ?></span><?php if($this->allowClearControl()) : ?><span class="notification-close"><a title="dismiss this notification">×</a></span><?php endif; ?></div></div>
+    <?php if($this->allowClearControl()) : ?>
+    <script type="text/javascript">
+        $$('#notification-bar .notification-close').first().observe('click',function(event) { var callback = <?php echo ($this->isFixed() ? "function() { \$\$('body').first().setStyle({marginTop:0}); }" : "function(){}") ?>; event.element().up('#notification-bar').fade({duration:0.5, afterFinish:callback}); Mage.Cookies.set("<?php echo $this->getNotificationClearCookieName() ?>","1",new Date((new Date()).getTime() + 365*24*60*60*1000),"/"); });
+    </script>
+    <?php endif; ?>
+<?php endif; ?>

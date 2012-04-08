@@ -7,3 +7,7 @@ app/code/community/FoxRunSoftware/NotificationBar app/code/community/FoxRunSoftw
 
 # Magento Global Configuration
 app/etc/modules/FoxRunSoftware_NotificationBar.xml app/etc/modules/FoxRunSoftware_NotificationBar.xml
+
+# design
+app/design/frontend/base/default/layout/notificationbar.xml app/design/frontend/base/default/layout/notificationbar.xml
+app/design/frontend/base/default/template/notificationbar   app/design/frontend/base/default/template/notificationbar
