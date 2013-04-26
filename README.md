@@ -4,7 +4,7 @@ Easily add and customize a notification bar across the top of your Magento ecomm
 
 ## Features ##
 
-* Easily configurable from System > Configuration > General Ð Design > Notification Bar
+* Easily configurable from System > Configuration > General - Design > Notification Bar
 * Style notification bar to match your theme
 * Notification bar content may contain plain text, HTML and template tags
 * Optionally allow visitors to close and dismiss the notification bar
@@ -22,7 +22,7 @@ Easily add and customize a notification bar across the top of your Magento ecomm
 
 * Download and install the extension
 * Log into the Magento admin
-* Go to the following: System > Configuration > General Ð Design > Notification Bar
+* Go to the following: System > Configuration > General - Design > Notification Bar
 * Configure your notification bar
 
 ### Notification Bar Configuration
@@ -34,10 +34,12 @@ Easily add and customize a notification bar across the top of your Magento ecomm
 1. Make sure the plugin is installed
 1. Verify you're using one of the supported Magento CE versions
 1. Go to System > Configuration > Advanced - Advanced and verify that you see "FoxRunSoftware_NotificationBar" in the list, and that it's set to "enabled"
-1. Log out of the admin, and logging back in (and see whether it shows up in that Advanced panel)
-1. Go to System > Cache Management and refresh all caches
-1. Verify that the following file exists in your Magento install:  app/etc/modules/FoxRunSoftware_NotificationBar.xml
-1. View the page source and see whether the content is showing up:
+    1. Log out of the admin, and logging back in (and see whether it shows up in that Advanced panel)
+    1. Go to System > Cache Management and refresh all caches
+    1. Verify that the following file exists in your Magento install:  app/etc/modules/FoxRunSoftware_NotificationBar.xml
+1. The Notification Bar hooks into the `after_body_start` block which should appear in the page.xml layout file and be echoed in the page template files (ie 1column.phtml):
+```<?php echo $this->getChildHtml('after_body_start') ?>```
+Resulting in something like the following appearing in your page source if everything is working properly:
 ```<div id="notification-bar"><div id="notification"><span class="notification-content">My Message</span></div></div>```
 
 ## Changelog ##
