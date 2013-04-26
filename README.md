@@ -16,7 +16,7 @@ Easily add and customize a notification bar across the top of your Magento ecomm
 
 ### Notification Bar in Action ###
 
-![alt text](https://github.com/justinstern/magento-notification-bar/new/master/images/notification-bar.jpg "Notification Bar")
+![alt text](https://raw.github.com/justinstern/magento-notification-bar/master/images/notification-bar.jpg "Notification Bar")
 
 ## Instructions ##
 
@@ -27,7 +27,7 @@ Easily add and customize a notification bar across the top of your Magento ecomm
 
 ### Notification Bar Configuration
 
-![alt text](https://github.com/justinstern/magento-notification-bar/new/master/images/notification-bar-configuration.jpg "Notification Bar Configuration")
+![alt text](https://raw.github.com/justinstern/magento-notification-bar/master/images/notification-bar-configuration.jpg "Notification Bar Configuration")
 
 ## Troubleshooting ##
 
