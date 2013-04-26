@@ -46,3 +46,8 @@ Resulting in something like the following appearing in your page source if every
 
 ### 1.0.0 - 2012.02.20 ###
 - Initial release
+
+License
+-------
+
+Source files are are made available under the terms of the [OSL 3.0 license](http://opensource.org/licenses/osl-3.0.php)
