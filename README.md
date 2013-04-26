@@ -20,7 +20,7 @@ Easily add and customize a notification bar across the top of your Magento ecomm
 
 ## Instructions ##
 
-* Download and install the extension
+* [Download](http://www.magentocommerce.com/magento-connect/notification-bar-9180.html) and install the extension
 * Log into the Magento admin
 * Go to the following: System > Configuration > General - Design > Notification Bar
 * Configure your notification bar
