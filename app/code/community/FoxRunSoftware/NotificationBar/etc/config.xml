@@ -37,6 +37,7 @@
             <notificationbar>                
                 <display>0</display>
                 <clearcontrol>0</clearcontrol>
+                <clear_lifetime>31536000</clear_lifetime>
                 <default_style>1</default_style>
                 <fixed>0</fixed>
                 <fixed_margin>28px</fixed_margin>

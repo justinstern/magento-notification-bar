@@ -24,6 +24,7 @@ class FoxRunSoftware_NotificationBar_Block_Html_Notifications extends Mage_Core_
     const XML_PATH_NOTIFICATIONBAR_FIXED         = 'design/notificationbar/fixed';
     const XML_PATH_NOTIFICATIONBAR_START_DATE    = 'design/notificationbar/start_date';
     const XML_PATH_NOTIFICATIONBAR_END_DATE      = 'design/notificationbar/end_date';
+    const XML_PATH_NOTIFICATIONBAR_CLEAR_LIFETIME    = 'design/notificationbar/clear_lifetime';
     
     /**
      * Check if the notifications bar should be displayed
@@ -101,6 +102,14 @@ class FoxRunSoftware_NotificationBar_Block_Html_Notifications extends Mage_Core_
      */
     public function isNotificationCleared() {
         return Mage::getSingleton('core/cookie')->get($this->getNotificationClearCookieName());
+    }
+
+    /**
+     * Returns the setttings for clear cookie lifetime
+     * @return mixed
+     */
+    public function getNotificationClearLifetime() {
+        return Mage::getStoreConfig(self::XML_PATH_NOTIFICATIONBAR_CLEAR_LIFETIME);
     }
     
     /**
