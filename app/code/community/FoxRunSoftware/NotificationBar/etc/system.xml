@@ -58,6 +58,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </clearcontrol>
+                        <clear_lifetime translate="label comment">
+                            <label>How long is notification bar closed (sec)</label>
+                            <comment>If "Allow Notification to be Closed". Set when notification will reappear. (default: 31536000)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </clear_lifetime>
                         <identifier translate="label comment">
                             <label>Notification Bar Identifier</label>
                             <comment>Optional; internally identifies the current notification bar.  Setting this to a new value will cause the notification bar to display to all users, even those who cleared a previously identified bar.</comment>
