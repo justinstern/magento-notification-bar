@@ -1,7 +1,10 @@
 {
-    "name":"FoxRunSoftware/FoxRunSoftware_NotificationBar",
+    "name":"foxrunsoftware/notificationbar",
     "type":"magento-module",
     "license":"OSL 3.0",
     "homepage":"https://github.com/justinstern/magento-notification-bar",
-    "description":"Easily add and customize a notification bar across the top of your Magento ecommerce site, allowing you to make announcements and leave notices to keep your customers informed and engaged"
+    "description":"Easily add and customize a notification bar across the top of your Magento ecommerce site, allowing you to make announcements and leave notices to keep your customers informed and engaged",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
 }
