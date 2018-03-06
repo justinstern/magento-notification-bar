@@ -17,7 +17,6 @@
 class FoxRunSoftware_NotificationBar_Block_Html_Styles extends Mage_Core_Block_Template
 {
     const XML_PATH_NOTIFICATIONBAR_DEFAULT_STYLE = 'design/notificationbar/default_style';
-    const XML_PATH_NOTIFICATIONBAR_FIXED_MARGIN  = 'design/notificationbar/fixed_margin';
     const XML_NOTIFICATIONBAR_BLOCK_NAME         = 'notificationbar_notifications';
     
     /**
@@ -39,16 +38,6 @@ class FoxRunSoftware_NotificationBar_Block_Html_Styles extends Mage_Core_Block_T
         return $this->_getNotificationBlock()->isFixed();
     }
     
-    /**
-     * Returns the top margin value to apply to the body element when the 
-     * notification bar is fixed in place
-     * 
-     * @return string
-     */
-    public function getFixedMargin() {
-        return Mage::getStoreConfig(self::XML_PATH_NOTIFICATIONBAR_FIXED_MARGIN);
-    }
-
     /**
      * Check if the notifications bar should be displayed
      *
