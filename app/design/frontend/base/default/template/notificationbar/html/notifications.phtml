@@ -22,12 +22,22 @@
  */
 ?>
 <?php if ($this->displayNotifications()): ?>
-    <div id="notification-bar"><div id="notification"><span class="notification-content"><?php echo $this->getNotificationContent(); ?></span><?php if($this->allowClearControl()) : ?><span class="notification-close"><a title="<?php echo $this->__('dismiss this notification'); ?>">×</a></span><?php endif; ?></div></div>
+    <div id="notification-bar"><div id="notification">
+        <?php if($this->allowClearControl()) : ?>
+            <span class="notification-close"><a title="<?php echo $this->__('dismiss this notification'); ?>">×</a></span>
+        <?php endif; ?>
+        <span class="notification-content"><?php echo $this->getNotificationContent(); ?></span>
+    </div></div>
     <?php if($this->isFixed()) : ?>
     <div id="notification-bar-push">
         <!-- If JS does not work we just use the div below to push-->
         <noscript>
-            <div style="visibility: hidden;"><div><span class="notification-content"><?php echo $this->getNotificationContent(); ?></span><?php if($this->allowClearControl()) : ?><span class="notification-close"><a title="<?php echo $this->__('dismiss this notification'); ?>">×</a></span><?php endif; ?></div></div>
+            <div style="visibility: hidden;"><div>
+                <?php if($this->allowClearControl()) : ?>
+                    <span class="notification-close"><a title="<?php echo $this->__('dismiss this notification'); ?>">×</a></span>
+                <?php endif; ?>
+                <span class="notification-content"><?php echo $this->getNotificationContent(); ?></span>
+            </div></div>
         </noscript>
     </div>
     <script type="text/javascript">
