@@ -22,7 +22,34 @@
  */
 ?>
 <?php if ($this->displayNotifications()): ?>
-    <div id="notification-bar"><div id="notification"><span class="notification-content"><?php echo $this->getNotificationContent(); ?></span><?php if($this->allowClearControl()) : ?><span class="notification-close"><a title="<?php echo $this->__('dismiss this notification'); ?>">×</a></span><?php endif; ?></div></div>
+    <div id="notification-bar"><div id="notification">
+        <?php if($this->allowClearControl()) : ?>
+            <span class="notification-close"><a title="<?php echo $this->__('dismiss this notification'); ?>">×</a></span>
+        <?php endif; ?>
+        <span class="notification-content"><?php echo $this->getNotificationContent(); ?></span>
+    </div></div>
+    <?php if($this->isFixed()) : ?>
+    <div id="notification-bar-push">
+        <!-- If JS does not work we just use the div below to push-->
+        <noscript>
+            <div style="visibility: hidden;"><div>
+                <?php if($this->allowClearControl()) : ?>
+                    <span class="notification-close"><a title="<?php echo $this->__('dismiss this notification'); ?>">×</a></span>
+                <?php endif; ?>
+                <span class="notification-content"><?php echo $this->getNotificationContent(); ?></span>
+            </div></div>
+        </noscript>
+    </div>
+    <script type="text/javascript">
+        function resizeHeader() {
+            $("notification-bar-push").setStyle({
+                "height": $("notification-bar").getHeight()+'px'
+            });
+        }
+        document.observe("dom:loaded", resizeHeader);
+        Event.observe(window, "resize", resizeHeader);
+    </script>
+    <?php endif; ?>
     <?php if($this->allowClearControl()) : ?>
     <script type="text/javascript">
         $$('#notification-bar .notification-close').first().observe('click',function(event) { var callback = <?php echo ($this->isFixed() ? "function() { \$\$('body').first().setStyle({marginTop:0}); }" : "function(){}") ?>; event.element().up('#notification-bar').fade({duration:0.5, afterFinish:callback}); Mage.Cookies.set("<?php echo $this->getNotificationClearCookieName() ?>","1",new Date((new Date()).getTime() + <?php echo $this->getNotificationClearLifetime() ?>*1000),"/"); });

@@ -106,15 +106,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </fixed>
-                        <fixed_margin translate="label comment">
-                            <label>Fixed Body Margin</label>
-                            <comment>Used only when Fixed Notification Bar is enabled; this must be the height of the notification bar, in CSS units</comment>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>90</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </fixed_margin>
                     </fields>
                 </notificationbar>
             </groups>
